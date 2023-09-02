@@ -1,30 +1,33 @@
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Home = () => {
+import IMain_Links from '@/templates/main_links';
+import IMain_BaseData from '@/templates/main_basedata';
+
+const Home = ({baseData, linksData}: InferGetServerSidePropsType<GetServerSideProps>) => {
 	return (<>
     <Head>
         <title>Main - hwahyang.space</title>
     </Head>
-    <body style={{backgroundImage: "url('https://cdn.hwahyang.space/hspace_v2/images/20200902_B.png')"}}>
+    <body style={{backgroundImage: "url('" + baseData.backgroundImage + "')"}}>
         <div className="outline">
             <div className="card">
-                <div className="inner" style={{backgroundImage: "url('https://cdn.hwahyang.space/hspace_v2/images/20200902_B.png')"}}>
+                <div className="inner" style={{backgroundImage: "url('" + baseData.backgroundImage + "')"}}>
                     <div className="front">
-                        <h1 className="Pretendard-ExtraBold">KangHyeon Kim</h1>
+                        <h1 className="Pretendard-ExtraBold">{baseData.frontName}</h1>
                         <h6 className="Pretendard-Regular">Hover your mouse!</h6>
                     </div>
                     <div className="back">
-                        <Image src="https://cdn.hwahyang.space/hspace_v2/images/HwaHyang_37_Alpha.png" alt="Profile Image" height={500} width={500} />
-                        <h1 className="Pretendard-ExtraBold">HwaHyang</h1>
-                        <h4 className="Pretendard-Medium">Game Developer</h4>
+                        <Image src={baseData.profileImage} alt="Profile Image" height={500} width={500} />
+                        <h1 className="Pretendard-ExtraBold">{baseData.backName}</h1>
+                        <h4 className="Pretendard-Medium">{baseData.description}</h4>
                         <p>
-                            <a href="https://pf.hwahyang.space"><i className="fa-solid fa-house"></i></a>&nbsp;
-                            <a href="https://twitter.com/_hwahyang_" target="_blank"><i className="fa-brands fa-twitter"></i></a>&nbsp;
-                            <a href="https://github.com/hwahyang1" target="_blank"><i className="fa-brands fa-github"></i></a>&nbsp;
-                            <a href="mailto:me@hwahyang.space"><i className="fa-solid fa-envelope"></i></a>&nbsp;
-                            <a href="https://dash.hwahyang.space"><i className="fa-solid fa-arrow-right-to-bracket"></i></a>
+                            {linksData.map((data: IMain_Links, index: number) => (
+                                <a key={index} href={data.link} target={data.openInNewTab ? '_blank' : ''}><i className={data.faviconId}></i>&nbsp;</a>
+                            ))}
                         </p>
                     </div>
                 </div>
@@ -35,6 +38,16 @@ const Home = () => {
         </footer>
     </body>
     </>)
+}
+
+export const getServerSideProps = async () => {
+    const baseRes = await fetch("https://api.hwahyang.space/api/v2/Main/baseData");
+    const linksRes = await fetch("https://api.hwahyang.space/api/v2/Main/links");
+    const baseData = await baseRes.json();
+    const linksData = await linksRes.json();
+    return {
+      props: {baseData, linksData},
+    }
 }
 
 export default Home;
