@@ -5,6 +5,8 @@ const rootUrl = "https://hwahyang.space"
 const imageUrl = "https://cdn.hwahyang.space/hspace_v2/images/HwaHyang_19_Alpha.gif";
 
 const naverVerificationCode = "c250da1f90dc5b9a29cb3f2f0161e66657e0f7ce";
+const GA4_Id = "G-15YVBM71DX";
+
 class CustomDocument extends Document {
 	render() {
 		return (
@@ -46,6 +48,25 @@ class CustomDocument extends Document {
 					<link href="https://cdn.hwahyang.space/hspace_v2/css/Main/style.css" rel="stylesheet"/>
 					
     				<meta name="naver-site-verification" content={naverVerificationCode} />
+
+					<Script
+						strategy="beforeInteractive"
+						src={`https://www.googletagmanager.com/gtag/js?id=${GA4_Id}`}
+					/>
+					<Script
+						id="gtag-init"
+						strategy="beforeInteractive"
+						dangerouslySetInnerHTML={{
+						__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', '${GA4_Id}', {
+							page_path: window.location.pathname,
+							});
+						`,
+						}}
+					/>
 				</Head>
 
 				<Main />
