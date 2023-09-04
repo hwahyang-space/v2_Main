@@ -24,9 +24,9 @@ class CustomDocument extends Document {
 
 					<meta name="theme-color" content="#FFFFFF"/>
 
-					<meta property="og:site_name" content="hwahyang.space"/>
+					<meta property="og:site_name" content="HwaHyang"/>
 					<meta property="og:title" content="Main"/>
-					<meta property="og:description" content="HwaHyang"/>
+					<meta property="og:description" content="hwahyang.space"/>
 					<meta property="og:type" content="website"/>
 					<meta property="og:locale" content="EN"/>
 					<meta property="og:url" content={rootUrl}/>
@@ -35,17 +35,17 @@ class CustomDocument extends Document {
 					<meta name="twitter:card" content="summary"/>
 					<meta name="twitter:site" content="hwahyang.space"/>
 					<meta name="twitter:title" content="Main"/>
-					<meta name="twitter:description" content="HwaHyang"/>
+					<meta name="twitter:description" content="hwahyang.space"/>
 					<meta name="twitter:url" content={rootUrl}/>
 					<meta name="twitter:image" content={imageUrl}/>
 
 					<meta name="format-detection" content="telephone=no"/>
 					<meta name="format-detection" content="email=no"/>
 
-					<link href="https://cdn.hwahyang.space/hspace_v2/fonts/Pretendard.css" rel="stylesheet"/>
+					<link href="https://cdn.hwahyang.space/hspace_v2/fonts/Pretendard.css?v=20230825" rel="stylesheet"/>
 					<Script strategy="beforeInteractive" src="https://kit.fontawesome.com/6a945d59dd.js" crossOrigin="anonymous" />
 
-					<link href="https://cdn.hwahyang.space/hspace_v2/css/Main/style.css" rel="stylesheet"/>
+					<link href="https://cdn.hwahyang.space/hspace_v2/css/Main/style.css?v=20230904" rel="stylesheet"/>
 					
     				<meta name="naver-site-verification" content={naverVerificationCode} />
 
