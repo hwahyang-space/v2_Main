@@ -4,6 +4,7 @@ import Script from "next/script";
 const rootUrl = "https://hwahyang.space"
 const imageUrl = "https://cdn.hwahyang.space/hspace_v2/images/HwaHyang_19_Alpha.gif";
 
+const naverVerificationCode = "c250da1f90dc5b9a29cb3f2f0161e66657e0f7ce";
 class CustomDocument extends Document {
 	render() {
 		return (
@@ -43,6 +44,8 @@ class CustomDocument extends Document {
 					<Script strategy="beforeInteractive" src="https://kit.fontawesome.com/6a945d59dd.js" crossOrigin="anonymous" />
 
 					<link href="https://cdn.hwahyang.space/hspace_v2/css/Main/style.css" rel="stylesheet"/>
+					
+    				<meta name="naver-site-verification" content={naverVerificationCode} />
 				</Head>
 
 				<Main />
