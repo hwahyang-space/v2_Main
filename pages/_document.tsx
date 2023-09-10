@@ -12,13 +12,13 @@ class CustomDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<meta name="description" content="hwahyang.space"/>
+					<meta name="description" content="hwahyang.space Main"/>
 					<link rel="icon" type="image/gif" href={imageUrl}/>
 
 					<link rel="canonical" href={rootUrl}/>
 
 					<meta name="title" content="Main" className="meta-title"/>
-					<meta name="description" content="hwahyang.space" className="meta-desc"/>
+					<meta name="description" content="hwahyang.space Main" className="meta-desc"/>
 					<meta name="apple-mobile-web-app-title" content="hwahyang.space"/>
 					<link rel="image_src" href={imageUrl}/>
 
@@ -26,7 +26,7 @@ class CustomDocument extends Document {
 
 					<meta property="og:site_name" content="HwaHyang"/>
 					<meta property="og:title" content="Main"/>
-					<meta property="og:description" content="hwahyang.space"/>
+					<meta property="og:description" content="hwahyang.space Main"/>
 					<meta property="og:type" content="website"/>
 					<meta property="og:locale" content="EN"/>
 					<meta property="og:url" content={rootUrl}/>
@@ -35,7 +35,7 @@ class CustomDocument extends Document {
 					<meta name="twitter:card" content="summary"/>
 					<meta name="twitter:site" content="hwahyang.space"/>
 					<meta name="twitter:title" content="Main"/>
-					<meta name="twitter:description" content="hwahyang.space"/>
+					<meta name="twitter:description" content="hwahyang.space - Main"/>
 					<meta name="twitter:url" content={rootUrl}/>
 					<meta name="twitter:image" content={imageUrl}/>
 
