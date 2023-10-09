@@ -1,6 +1,6 @@
 {
   "name": "hwahyang.space_v2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "hwahyang.space v2 Main",
   "scripts": {
     "update-dependencies": "npm i -g npm-check-updates@latest && npx ncu -u && npm i -D --save",

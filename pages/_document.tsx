@@ -45,7 +45,7 @@ class CustomDocument extends Document {
 					<link href="https://cdn.hwahyang.space/hspace_v2/fonts/Pretendard.css?v=20230825" rel="stylesheet"/>
 					<Script strategy="beforeInteractive" src="https://kit.fontawesome.com/6a945d59dd.js" crossOrigin="anonymous" />
 
-					<link href="https://cdn.hwahyang.space/hspace_v2/css/Main/style.css?v=20230904" rel="stylesheet"/>
+					<link href="https://cdn.hwahyang.space/hspace_v2/css/Main/style.css?v=20231010" rel="stylesheet"/>
 					
     				<meta name="naver-site-verification" content={naverVerificationCode} />
 

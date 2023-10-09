@@ -22,6 +22,7 @@ const Home = ({baseData, linksData}: InferGetServerSidePropsType<GetServerSidePr
     <Head>
         <title>Main - hwahyang.space</title>
     </Head>
+    <div className="cover"></div>
     <div className="outline">
         <div className="card">
             <div className="inner" style={{backgroundImage: "url('" + baseData.backgroundImage + "')"}}>
