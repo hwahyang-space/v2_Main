@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ['cdn.hwahyang.space'],
+		domains: ['cdn.meowlabs.kr'],
 	},
 };
 

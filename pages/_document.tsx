@@ -12,7 +12,7 @@ class CustomDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<meta name="description" content="hwahyang.space Main"/>
+					<title>Main - hwahyang.space</title>
 					<meta name="description" content="hwahyang.space Main" />
 					<link rel="icon" type="image/gif" href={imageUrl} />
 
@@ -68,7 +68,7 @@ class CustomDocument extends Document {
 						id="gtag-init"
 						strategy="beforeInteractive"
 						dangerouslySetInnerHTML={{
-						__html: `
+							__html: `
 							window.dataLayer = window.dataLayer || [];
 							function gtag(){dataLayer.push(arguments);}
 							gtag('js', new Date());
