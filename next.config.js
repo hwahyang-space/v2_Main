@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ['cdn.meowlabs.kr'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'cdn.meowlabs.kr',
+			},
+		],
 	},
 };
 
