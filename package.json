@@ -13,12 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/hwahyang-space/v2_Main.git"
   },
-  "author": "HwaHyang",
+  "author": "MeowLabs",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/hwahyang-space/v2_Main/issues"
   },
-  "homepage": "https://hwahyang.space",
+  "homepage": "https://meowlabs.kr",
   "dependencies": {
     "next": "^15.5.9",
     "react": "^19.2.3",

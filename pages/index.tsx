@@ -41,7 +41,7 @@ const Home = ({baseData, linksData}: InferGetServerSidePropsType<GetServerSidePr
         </div>
     </div>
     <footer className="Pretendard-Light">
-        <p>&copy; 2017-2024 <Link href="/">HwaHyang</Link>, 2021-2024 <a href="/" target="_blank">MeowLabs</a>.</p>
+        <p>&copy; 2017-2026 <Link href="/">HwaHyang</Link>, 2021-2026 <a href="https://meowlabs.kr" target="_blank">MeowLabs</a>.</p>
     </footer>
     </>)
 }
